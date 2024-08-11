@@ -72,6 +72,15 @@ export default function Home() {
   };
 
   const themeStyles = {
+    root: {
+      minHeight: '100vh',
+      background: 'linear-gradient(to right, #007bff, #1e1e1e)', // Gradient background
+      color: '#ffffff',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
     container: {
       width: "100%",
       height: "80vh",
@@ -103,8 +112,6 @@ export default function Home() {
         backgroundColor: darkMode ? "#666" : "#0056b3",
       },
     },
-
-   
   };
 
   const onKeyDown = (e) => {
@@ -113,9 +120,8 @@ export default function Home() {
     }
   };
 
-
   return (
-    <>
+    <Box sx={themeStyles.root}>
       <Container
         maxWidth="lg"
         sx={{ display: "flex", justifyContent: "center" }}
@@ -188,12 +194,10 @@ export default function Home() {
               >
                 Send
               </Button>
-  
             </Stack>
           </Box>
-
         </Stack>
       </Container>
-    </>
+    </Box>
   );
 }
